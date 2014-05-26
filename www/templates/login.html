@@ -1,0 +1,48 @@
+<ion-view title="Login" hide-back-button="true">
+  <ion-content class="has-header" ng-controller="LoginCtrl">
+   <form id="comment" ng-submit="login()">
+   <!-- <form id="login" action="http://10.0.2.15:8180/fake" method="post"> -->
+       <div class="list">
+   
+  <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="email" name="email" ng-model="email">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" name="password" ng-model="password">
+  </label>
+</div>
+   <button type="submit" class="button button-block button-calm">
+      <i class="icon ion-ios7-person comment-post"></i>  Login
+    </button>
+      
+    </form>
+ <button class="button button-block button-positive" ng-click="signup()">
+      <i class="icon ion-ios7-personadd comment-post"></i>  Signup
+    </button>
+
+    <ul class="list">
+
+  <li class="item item-toggle facebooklogin">
+      <i class="ion-social-facebook"></i> <font color="white"> Facebook Login</font>
+     <label class="toggle toggle-balanced">
+       <input type="checkbox" ng-change="changefacebook()" ng-model="facebooklogin">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+   <li class="item item-toggle twitterlogin">
+      <i class="ion-social-twitter"></i> <font color="white"> Twitter Login</font>
+     <label class="toggle toggle-balanced">
+       <input type="checkbox" ng-change="changetwitter()" ng-model="twitterlogin">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+
+</ul>
+  </ion-content>
+</ion-view>

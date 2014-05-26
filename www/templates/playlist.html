@@ -1,0 +1,43 @@
+<ion-view title="{{movie.name}}">
+  <ion-content class="has-header reviews">
+    <div class="item item-divider">
+        Movie Details
+    </div>
+    <img class="movie-poster" src="{{movie.detail.posters.detailed}}">
+    <h5>Name: {{movie.name}}</h5>
+    <h5>Synopsis: {{movie.detail.synopsis}}</h5>
+    <h5>IMBD No: {{movie.detail.alternate_ids.imdb}}</h5>
+    <h4>Abridged Cast:</h4>
+    <h5 ng-repeat="char in movie.detail.abridged_cast">Name: {{char.name}}, Characters: {{char.characters[0]}} </h5>
+    <h4>Ratings</h4>
+    <h5>Critics Rating: {{movie.detail.ratings.critics_rating}}</h5>
+    <h5>Critics Score: {{movie.detail.ratings.critics_score}}</h5>
+    <h5>Audience Rating: {{movie.detail.ratings.audience_rating}}</h5>
+    <h5>Audience Score: {{movie.detail.ratings.audience_score}}</h5>
+    <div class="item item-divider">
+    Review
+    </div>
+    
+    <ion-list>
+      <ion-item ng-repeat="review in myreviews" ng-click="showdetail(movie)" class="item-avatar">
+        <img src="{{review.movie.detail.posters.thumbnail}}" style="vertical-align:top"/><span style="vertical-align:top"><h3>Review: {{review.review.text}}</h3>
+        <h3>Rating: <i class="icon ion-heart like" ng-repeat="i in getNumber(review.review.rating) track by $index"></i></h3></span>
+        <h3>Commented By: {{review.user.name}}</h3>
+        <h3>Commented On: {{review.review.createdAt | date:'yyyy-MM-dd HH:mm:ss'}}</h3>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <div class="tabs tabs-icon-only">
+    <a class="tab-item" ng-click="home()">
+      <i class="icon ion-home"></i>
+     
+    </a>
+    <a class="tab-item" ng-click="postComment(movie.id)">
+      <i class="icon ion-edit"></i>
+      
+    </a>
+      <a class="tab-item" ng-click="qrscanner()">
+    <i class="icon ion-camera"></i>
+    </a>
+</div>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view title="Signup" hide-back-button="true">
+  <ion-content class="has-header" ng-controller="SignupCtrl">
+   <form id="comment" ng-submit="signup()">
+       <div class="list">
+   <label class="item item-input">
+    <span class="input-label">User Name</span>
+    <input type="text" ng-model="username">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Full Name</span>
+    <input type="text" ng-model="fullname">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="email" ng-model="email">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" ng-model="password">
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password Confirmation</span>
+    <input type="password" ng-model="password2">
+  </label>
+</div>
+      <button type="submit" class="button button-block button-positive">
+      <i class="icon ion-ios7-personadd comment-post"></i>  Signup
+    </button>
+    </form>
+    <button class="button button-block button-calm" ng-click="login()">
+      <i class="icon ion-ios7-person comment-post"></i>  Login
+    </button>
+      
+  </ion-content>
+</ion-view>

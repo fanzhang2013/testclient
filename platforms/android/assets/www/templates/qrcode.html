@@ -1,0 +1,31 @@
+<ion-view title="QR Scanner" hide-back-button="true" onload="onBodyLoad()">
+<ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+    <div class="card">
+  <div class="item item-text-wrap">
+    <font color="red">Tap the Scan button and focus your phone camara onto the QR Code provided on the post,please!</font>
+  </div>
+</div>
+   <button ng-click="scan()" class="button button-calm button-block">
+    <i class="icon ion-camera"></i>  Scan
+   </button>
+  </ion-content>
+  <div class="tabs tabs-icon-only">
+    <a class="tab-item" ng-click="home()">
+      <i class="icon ion-home"></i>
+     
+    </a>
+    <a class="tab-item">
+      <i class="icon ion-star"></i>
+      
+    </a>
+    <a class="tab-item" ng-click="qrscanner()">
+    <i class="icon ion-camera"></i>
+    </a>
+</div>
+</ion-view>
+
+
+ 

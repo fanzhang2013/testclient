@@ -1,0 +1,45 @@
+<ion-view title="Post Comment">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header" ng-controller="PostCommentCtrl">
+    <h2 style="text-align:center;">{{movie.name}}</h2>
+    <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Movie Name</span>
+    <h3>{{movie.name}}</h3>
+  </label>
+   <form id="comment" ng-submit="postreview()">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Rating</span>
+     <div class="item range range-positive">
+    <i class="icon ion-ios7-heart-outline"></i>
+    <input type="range" name="volume" min="1" max="5" value="2" ng-change="change()" required ng-model="rating">
+    <i class="icon ion-heart like"></i>
+    <span class="input-label">{{experience}}</span>
+  </div>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Comment</span>
+    <textarea ng-model="comment" required></textarea>
+  </label>
+   <button type="submit" class="button button-block button-positive">
+      <i class="icon ion-speakerphone comment-post"></i>  Post
+    </button>
+    </form>
+</div>
+  </ion-content>
+   <div class="tabs tabs-icon-only">
+    <a class="tab-item" ng-click="home()">
+      <i class="icon ion-home"></i>
+     
+    </a>
+    <a class="tab-item" ng-click="postComment(movie.id)">
+      <i class="icon ion-edit"></i>
+      
+    </a>
+    <a class="tab-item">
+    <i class="icon ion-gear-a"></i>
+    </a>
+</div>
+</ion-view>
