@@ -1,8 +1,8 @@
 angular.module('starter.controllers', ['ngRoute','ngCookies','firebase'])
 
 .factory('Page', function($firebase) {
-    var title = 'http://192.168.0.15:8080';
-    //var title = 'http://54.73.131.149:8080';
+    //var title = 'http://192.168.0.15:8080';
+    var title = 'http://54.73.131.149:8080';
     var menu = '';
     var friendRef = new Firebase("https://ewom.firebaseio.com/friends");
     var friend = $firebase(friendRef);
